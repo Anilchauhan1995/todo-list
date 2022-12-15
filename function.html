@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a.btn {
+    display: flex;
+    background-color: #ddd;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    
+<div class="buttons">
+    <a class="btn" id="plus" onclick="calc(a,b)">+</a>
+    <a class="btn" id="minus" onclick="calc(a,b)" >-</a>
+    <a class="btn" id="divid" onclick="calc(a,b)">/</a>
+    <a class="btn" id="multiply" onclick="calc(a,b)">*</a>
+     <a>=</a>
+    <input type="number" id="demo">
+</div>
+
+    <script>
+    var a = Number(prompt("Enter a number"));
+    var b = Number(prompt("enter a number"));      
+    var c = document.getElementById("demo");
+
+    // function plus(){
+    //     document.getElementById("demo").value = a+b;
+        
+    // }
+    
+    // function minus(){
+    //     document.getElementById("demo").value = a-b;
+    // }
+    // function divid(){
+    //     document.getElementById("demo").value = a/b;
+    // }
+    // function multiply(){
+    //     document.getElementById("demo").value = a*b;
+    // }
+
+    function calc(a,b){
+        document.getElementById('plus').onclick = function() {
+            c.value = a+b;
+            
+        }
+        document.getElementById('minus').onclick = function() {
+            c.value = a-b;
+        }
+        document.getElementById('divid').onclick = function() {
+            c.value = a/b;
+        }
+        document.getElementById('multiply').onclick = function() {
+            c.value = a*b;
+        }
+    }
+
+    const myTimeout = window.setTimeout(myGreeting, 5000);
+    function myGreeting() {
+        if (c!="") {
+        console.log("thanks");
+        window.location.reload();
+
+        }
+    alert("do you want try again");
+      
+
+    }
+
+    </script>
+
+</body>
+</html>

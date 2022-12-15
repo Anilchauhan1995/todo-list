@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+
+    <style>
+        .close{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="text">
+    <input type="submit" id="submit" onclick="addTodo()">
+    <div id="list">
+        <ul id="todo">
+
+        </ul>
+    </div>
+    
+</body>
+<script>
+
+let text =  document.getElementById("text");
+let submit =  document.getElementById("submit");
+let todo =  document.getElementById("todo");
+
+function addTodo(){
+
+    let items = text.value;
+    let creatEle = document.createElement("li");
+    let errorText = document.createElement("span");
+    let span =  document.createElement("span");
+    var txt = document.createTextNode("\u00D7");
+    span.appendChild(txt);
+    span.className = "close";
+    let close  = document.getElementsByClassName("close");
+    if (items==='') {
+        alert("value is null");
+
+    } else {
+        creatEle.innerHTML+=items;
+        todo.append(creatEle);
+        creatEle.append(span);
+        text.value = '';
+    }
+    for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.remove();
+    }
+  }
+
+}
+
+
+    
+</script>
+</html>

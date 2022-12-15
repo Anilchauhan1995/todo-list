@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cube of a Number</title>
+<link rel='stylesheet' href='form-style.css' type='text/css' />
+</head>
+<body onload='document.form1.text1.focus()'>
+<div class="mail">
+<h2>Input a number and get it's Cube</h2>
+<form name="form1" action="#">
+<ul>
+<li><input type='text' name='text1'/></li>
+<li>&nbsp;</li>
+<li><input type="submit" name="submit" value="Submit" onclick="cube(document.form1.text1)" /></li>
+<li>&nbsp;</li>
+</ul>
+</form>
+</div>
+<script>
+    function cube(inputtxt)
+    {
+      var numbers = /^[-+]?[0-9]+$/;  
+	  var x;
+	  if(inputtxt.value.match(numbers))
+      {
+      alert('Cube of '+inputtxt.value+' is '+inputtxt.value*inputtxt.value*inputtxt.value);
+      document.form1.text1.focus();
+      return true;
+      }
+      else
+      {
+      alert('Please input numeric characters only');
+    //   document.form1.text1.focus();
+      return false;
+      }
+    } 
+
+</script>
+</body>
+</html>
