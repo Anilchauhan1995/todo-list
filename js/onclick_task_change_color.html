@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .main{
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            column-gap: 5rem;
+            row-gap: 17rem;
+        }
+        #color_div{
+        height: 200px;
+        width: 300px;
+        background-color: orange;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%,-50%);
+        }
+        .buttons{
+            display: flex;
+            column-gap: 1rem;
+        }
+        .buttons a{
+            padding: 1rem;
+            color: #000;
+            text-decoration: none;
+        }
+        #red{
+        background-color: red;
+        }
+
+        #blue{
+        background-color: blue;
+        }
+
+        #yellow{
+        background-color: yellow;
+        }
+
+        #green{
+        background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div id="color_div"></div>
+            <div class="buttons">
+                <a href="javascript:void(0)" id="red" class='color'>
+                    red
+                </a>
+                <a href="javascript:void(0)" id="blue" class='color'>
+                    blue
+                </a>
+                <a href="javascript:void(0)" id="yellow" class='color'>
+                    yellow
+                </a>
+                <a href="javascript:void(0)" id="green" class='color'>
+                    Green
+                </a>
+            </div>
+    <div class="position_change_btn">
+        <a href="javascript:void(0)" class="btn" id="left">left</a>
+        <a href="javascript:void(0)" class="btn" id="right">right</a>
+        <a href="javascript:void(0)" class="btn" id="up">up</a>
+        <a href="javascript:void(0)" class="btn" id="down">down</a>
+    </div>
+    </main>
+
+    <script>
+       var colorElems = document.getElementsByClassName('color');
+        for(var i = 0; i < colorElems.length; i++) {
+        colorElems[i].onclick = changeColor;
+        }
+
+        function changeColor(){
+        var colorDiv = document.getElementById('color_div');
+        colorDiv.style.backgroundColor = this.id;
+        }
+
+        var position_change_btn = document.getElementsByClassName('btn');
+
+        for(var i = 0; i < position_change_btn.length; i++) {
+            // position_change_btn[i].onclick = changedir;
+            console.log(position_change_btn.length);
+            
+        }
+        // function changedir(){
+        // var colorDiv = document.getElementById('color_div');
+        // colorDiv.style.backgroundColor = this.id;
+        // }
+
+                
+    </script>
+
+
+<script>
+//     $(document).ready(function() {
+//     $("#left").click(function() {
+//         $("#color_div").animate({left: "0px"});
+//         $("#color_div").css({left: "0px"});
+//     });
+//     $("#right").click(function() {
+//         console.log("right");
+//         $("#color_div").animate({right: "0"});
+//         $("#color_div").css({left: "unset", right: "0" });
+//     });
+//     $("#up").click(function() {
+//         console.log("up");
+//         $("#color_div").animate({top: "0"});
+//         $("#color_div").css({top: "0"});
+//     });
+//     $("#down").click(function() {
+//         console.log("down");
+//         $("#color_div").animate({bottom: "0"});
+//         $("#color_div").css({top: "unset",bottom: "0"});
+//     });
+// });    
+</script>
+</body>
+</html>

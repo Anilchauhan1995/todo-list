@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="text">
+    <div id="here">
+
+    </div>
+    <button id="click">Click</button>
+    <script>
+        // var a = 10;
+        // var a = 20;
+        // console.log(a);
+
+        // let a = 10;
+        // //let a = 20;
+        // a = 30;
+        // console.log(a);
+
+    //    var user = prompt();
+
+    //     let greet = (a) => alert(a);
+    //     greet(user);
+    var btn_click = document.getElementById("click");
+    var user_name = document.getElementById("text")
+    var here = document.getElementById("here")
+  
+    const btnClick = ()=>{
+
+      here.innerHTML=user_name.value;
+        
+    };
+
+    btn_click.addEventListener("click", btnClick);
+   
+    </script>
+</body>
+</html>
