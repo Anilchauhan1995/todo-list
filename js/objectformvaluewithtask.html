@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <div class="form">
+
+        <form action="">
+             <label for="">Name</label>
+             <br>
+             <input type="text" id="name">
+             <br>
+             <br>
+             <label>Number</label>
+             <br>
+            <input type="number" id="number">
+            <br>
+            <br>
+            <label for="">email</label>
+            <br>
+            <input type="email" id="email">
+            <br>
+            <br>
+            <h4>First Semester</h4>
+            <br>
+            <label for="">Phy</label>
+            <br>
+            <input type="text" id="phy1">
+            <input type="number" placeholder="sub1 Number" value="100" id="sub1">
+            <br>
+            <br>
+            <label for="">Chemis</label>
+            <br>
+            <input type="" id="chemis1">
+            <input type="number" placeholder="sub2 Number" value="100" id="sub2">
+            <br>
+            <br>
+            <label for="">Math</label>
+            <br>
+            <input type="" id="math1">
+            <input type="number" placeholder="sub2 Number" value="100" id="sub3">
+            <br>
+            <br>
+            <h4 for="">Second Semester</h4>
+            <br>
+            <br>
+            <label for="">Phy</label>
+            <br>
+            <input type="text" id="phy2">
+            <input type="number" placeholder="sub1 Number" value="100" id="sub4">
+            <br>
+            <br>
+            <label for="">Chemis</label>
+            <br>
+            <input type="" id="chemis2">
+            <input type="number" placeholder="sub2 Number" value="100" id="sub5">
+            <br>
+            <br>
+            <label for="">Math</label>
+            <br>
+            <input type="" id="math2">
+            <input type="number" placeholder="sub2 Number" value="100" id="sub6">
+            <br>
+            <br>
+
+            <input type="submit" value="submit" onclick="myFun();">
+
+
+        </form>
+
+    </div>
+
+
+
+    <script>
+
+
+var inputs = document.getElementsByTagName('input').length;
+var input_value = inputs;
+
+var ob = {};
+var result = 0;
+
+function myFun(){
+    event.preventDefault();
+   var name =  document.getElementById("name").value;
+   var number =  document.getElementById("number").value;
+   var email =  document.getElementById("email").value;
+   var phy1 =  document.getElementById("phy1").value;
+   var chemis1 =  document.getElementById("chemis1").value;
+   var math1 =  document.getElementById("math1").value;
+   var phy2 =  document.getElementById("phy2").value;
+   var chemis2 = document.getElementById("chemis2").value;
+   var math2 =  document.getElementById("math2").value;
+   var Semester1 = Number(phy1) + Number(chemis1) + Number(math1);
+   var Semester2 = Number(phy2) + Number(chemis2) + Number(math2);
+
+
+   var ob = {
+     
+    Name: name,
+    Number:number,
+    Email: email,
+    Semester1: {physics: phy1 , Chemistry: chemis1 , Math:math1,Total:Semester1,percentage:(Semester1/300*100).toFixed(2) + "%"},
+    Semester2: {physics: phy2 , Chemistry: chemis2 , Math:math2,Total:Semester2,percentage:(Semester2/300*100).toFixed(2) + "%"},
+
+   }
+
+result = ((Semester1 + Semester2)/600 * 100).toFixed(2) + "%";
+   console.log(ob);
+   console.log(result);
+
+   
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

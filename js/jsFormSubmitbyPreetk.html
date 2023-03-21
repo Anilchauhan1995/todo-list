@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            display: flex;
+            gap: 10px;        
+        }
+
+        .form{
+            position: absolute;
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        h3{
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            margin-left: 20px;
+        }
+        h4{
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            margin-left: 35px;
+        }
+
+        .width{
+            width: 80px;
+        }
+
+        .size{
+            width: 200px;
+        }
+
+        .justify-between{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex{
+            display: flex;
+        }
+        .prev{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        .next{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #form1{
+            visibility: visible;
+        }
+
+        #form2{
+            visibility: hidden;
+        }
+
+        #form3{
+            visibility: hidden;
+            height: 90vh;            
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="div"> 
+        
+            <!-- Page 1 -->
+            <div id="form1" class="form">
+                <h2 class="">Page 1</h2>
+                <h3>Personal Details</h3>
+                <br>
+                <figure>
+                    <figcaption>Full Name</figcaption>
+                    <input type="text"  id="form1-input1" placeholder="enter your name" class="size">
+                </figure>
+                <figure>
+                    <figcaption>Phone Number</figcaption>
+                    <input type="text"  id="form1-input2" placeholder="enter your phone number" class="size">
+                </figure>
+                <figure>
+                    <figcaption>Email</figcaption>
+                    <input type="text"  id="form1-input3" placeholder="enter your email" class="size">
+                </figure>
+                <figure>
+                    <figcaption>Address</figcaption>
+                    <input type="text"  id="form1-input4" placeholder="enter your address" class="size">
+                </figure>
+                <button class="next" id="next1">Next</button>
+            </div>
+
+            <!-- page 2 -->
+            <div id="form2" class="form">
+                <h2 class="">Page 2</h2>
+                <!-- Marks -->
+                <h3>Marks</h3>
+                <br>
+                <figure>
+                    <figcaption>English</figcaption>
+                    <input type="text"  id="form2-input1" class="width" placeholder="obtained">
+                    <input type="text"   class="width hundred">
+                </figure>
+                <figure>
+                    <figcaption>Maths</figcaption>
+                    <input type="text"  id="form2-input2" class="width" placeholder="obtained">
+                    <input type="text"   class="width hundred">
+                </figure>
+                <figure>
+                    <figcaption>IP</figcaption>
+                    <input type="text"  id="form2-input3" class="width" placeholder="obtained">
+                    <input type="text"   class="width hundred" >
+                </figure>
+                <button class="prev" id="prev1">Prev</button>
+                <button class="next" id="next2">Next</button>
+            </div>
+
+            <!-- page 3 -->
+            <div id="form3" class="form">
+                <h2>Page 3</h2>
+                <h3>Preview</h3>
+                <h4>Personal Details</h4>
+                <figure class="justify-between">
+                    <span>Name :</span>
+                    <input type="text" id="form3-input1" class="size">
+                </figure>
+                <figure class="justify-between">
+                    <span>Phone Number :</span>
+                    <input type="text" id="form3-input2" class="size">
+                </figure>
+                <figure class="justify-between">
+                    <span>Email :</span>
+                    <input type="text" id="form3-input3" class="size">
+                </figure>
+                <figure class="justify-between">
+                    <span>Address :</span>
+                    <input type="text" id="form3-input4" class="size">
+                </figure>
+                <h4>Marks</h4>
+                <figure class="justify-between">
+                    <span>English :</span>
+                    <div>
+                        <input type="text" id="form3-input5" class="width">
+                        <input type="text" id="form3-input1" class="width hundred">
+                    </div>    
+                </figure>
+                <figure class="justify-between">
+                    <span>Maths :</span>
+                    <div>
+                        <input type="text" id="form3-input6" class="width">
+                        <input type="text" id="form3-input1" class="width hundred">
+                    </div>
+                    
+                </figure>
+                <figure class="justify-between">
+                    <span>IP :</span>
+                    <div>
+                        <input type="text" id="form3-input7" class="width">
+                        <input type="text" id="form3-input1" class="width hundred">
+                    </div>  
+                </figure>
+                <h4>Percentage & CGPA</h4>
+                <figure>
+                    <div class="justify-between">
+                        <span>Total Percentage :</span>
+                        <input type="text" id="totalMarks" class="width">
+                    </div>
+                    <br>
+                    <div class="justify-between">
+                        <span>Total CGPA :</span>
+                        <input type="text" id="totalCGPA" class="width">
+                    </div>
+                </figure>
+                <button class="prev" id="prev2">Prev</button>
+            </div>   
+        </div>
+
+
+    <script>
+         
+        
+        // page 1
+        let fullName = document.querySelector('#form1-input1');
+        let phoneNumber = document.querySelector('#form1-input2');
+        let email = document.querySelector('#form1-input3'); 
+        let address = document.querySelector('#form1-input4'); 
+
+
+        fullName.addEventListener('keyup', () => {
+            document.querySelector('#form3-input1').value = fullName.value
+        })
+        phoneNumber.addEventListener('keyup', () => {
+            document.querySelector('#form3-input2').value = phoneNumber.value
+        })
+        email.addEventListener('keyup', () => {
+            document.querySelector('#form3-input3').value = email.value
+        })
+        address.addEventListener('keyup', () => {
+            document.querySelector('#form3-input4').value = address.value
+        })
+
+        // page 2
+        let english = document.querySelector('#form2-input1')
+        let maths = document.querySelector('#form2-input2')
+        let ip = document.querySelector('#form2-input3')
+
+        english.addEventListener('keyup', () =>{
+            document.querySelector('#form3-input5').value = english.value
+        })
+        maths.addEventListener('keyup', () =>{
+            document.querySelector('#form3-input6').value = maths.value
+        })
+        ip.addEventListener('keyup', () => {
+            document.querySelector('#form3-input7').value = ip.value
+        })
+
+        // adding value in text-field multiple times using for loop
+        const inputs = document.querySelectorAll('.hundred');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].value = 100;
+        }
+
+        document.querySelector('.hundred').addEventListener('focus', () => {
+            alert("You can't edit this");
+            
+        })
+        
+        
+        // Buttons
+        document.querySelector('#next1').addEventListener('click', () => {
+            if(fullName.value == null || fullName.value == 0){
+                alert("Name can not be empty")
+            }
+            else if(phoneNumber.value == null || phoneNumber.value == 0){
+                alert("Phone Number can not be empty")
+            }
+            else if(email.value == null || phoneNumber.value == 0){
+                alert("Email can not be empty")
+            } 
+            else if(address.value == null || address.value == 0){
+                alert("Address can not be empty")
+            }
+            else {
+                document.querySelector('#form1').style.visibility = "hidden"
+                document.querySelector('#form2').style.visibility = "visible"
+            }
+            
+        })
+
+        document.querySelector('#prev1').addEventListener('click', () =>{
+            document.querySelector('#form2').style.visibility = "hidden"
+            document.querySelector('#form1').style.visibility = "visible"
+        })
+
+        document.querySelector('#next2').addEventListener('click', () => {
+            // next page calcultion
+            document.querySelector('#form2').style.visibility = "hidden"
+            document.querySelector('#form3').style.visibility = "visible"
+
+            // percentage calculation
+            let totalMarks = Number(english.value) + Number(maths.value) + Number(ip.value)
+            let totalPercentage = (totalMarks/300) * 100 ;
+            document.querySelector('#totalMarks').value = totalPercentage
+
+            // cgpa calculation
+            let totalCGPA = totalPercentage/9.5
+            document.querySelector('#totalCGPA').value = totalCGPA
+
+        })
+
+        document.querySelector('#prev2').addEventListener('click', () => {
+            document.querySelector('#form3').style.visibility = "hidden"
+            document.querySelector('#form2').style.visibility = "visible"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="input_fields">
+
+    </div>
+
+    <input type="text" id="input">
+    <button class="btn" type="button" onclick="myFun();">Click</button>
+
+
+   
+    
+    
+    <script>
+        var create_ele = `<input type="text" class="input">`;
+        var create_add = `<button id='add' onclick='myFunction();'>ADD</button>`;
+        function myFun(){
+            var input = document.getElementById("input").value;
+            var div = document.getElementById("input_fields").innerHTML;
+
+            for(var i=0; i<input; i++){
+                document.write(div = create_ele + "<br>" + "<br>");
+                
+                
+            }
+            document.write(create_add); 
+        }
+
+         var value = [];
+         var sum = 0;
+        function myFunction() {
+           var input_sum = document.getElementsByClassName("input");
+
+           for(var j=0;j<input_sum.length;j++){
+            value[j]= Number(input_sum[j].value);
+            sum += value[j];
+        }
+        console.log(value);
+        console.log(sum);
+          
+
+        }
+
+
+
+    </script>
+</body>
+</html>

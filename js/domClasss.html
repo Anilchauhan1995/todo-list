@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        #text {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-align: center;
+        }
+</style>
+<body>
+   
+    
+    <div id="text">
+
+    </div>
+<br>
+<br>
+    <button onclick="abc();">click</button>
+
+
+    <script>
+function abc(){
+    document.getElementById("text").innerHTML = "hii";
+    document.getElementById("text").style.backgroundColor = "black";
+    document.getElementById("text").style.width = "400px";
+    document.getElementById("text").style.height = "400px";
+    document.getElementById("text").style.transition = "";
+    document.getElementById("text").style.cssText = "display: block; position: absolute; transition: all .5s linear";
+
+}
+
+    </script>
+
+</body>
+</html>

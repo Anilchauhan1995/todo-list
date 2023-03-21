@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id="input">
+     <input type="text" id="text">
+     <button onclick="abc();">click me</button>
+     <input type="text" id="result">
+    <!-- <button onclick="alert('hi');">click me</button> -->
+    
+    <script>
+        var a = document.getElementById("input");
+        var b= document.getElementById("text");
+        var c = document.getElementById("result");
+
+
+
+        function abc(){
+            // console.log(a.value);
+
+            c.value =  Number( b.value) + Number(a.value);
+
+            a.value = "";
+           
+        };
+
+
+
+
+
+
+        
+        
+// abc();
+// alert("by");
+    </script>
+</body>
+</html>

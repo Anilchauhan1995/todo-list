@@ -1,0 +1,59 @@
+<html>
+<head>
+
+<title></title>
+
+
+</head>
+
+
+<body>
+
+
+<script>
+
+
+function abc()
+{
+
+var num=document.getElementById('abc').value;
+
+var i=1;
+
+var add;
+
+while(i<=10)
+{
+    
+
+add=num*i;
+document.getElementById('div').innerHTML=document.getElementById('div').innerHTML+num+"*"+i+"="+add+"<hr>";
+
+console.log(i++);
+
+}
+
+
+
+}
+
+</script>
+
+<input type="text" id="abc">
+
+<button onclick="abc()">clickme</button>
+
+<div class="box"id="div"></div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

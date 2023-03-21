@@ -1,0 +1,61 @@
+<script>
+function textboxDisplay(){
+    
+    document.getElementById("div2").style.display="inline";
+    document.getElementById("div3").style.display="inline";
+    document.getElementById("div1").style.display="none";
+    document.getElementById("div5").style.display="none";
+
+    var a = document.getElementById("text1").value;
+    var divdata="";
+    for(i=0; i<a; i++){
+        divdata+=`<input class="text2" type="text"/><br><br>`
+        document.getElementById("div2").innerHTML=divdata;
+        //b[i]=divdata.value;
+        //add=add+b[i]
+    }
+}
+
+function add(){
+    var element = document.getElementsByClassName("text2");
+    var add=0;
+    for(var j=0;j<element.length;j++){
+        var b=element[j].value;
+        add=Number(add)+Number(b);
+        
+    }
+    //console.log(add);
+    document.getElementById("div2").style.display="none";
+    document.getElementById("div3").style.display="none";
+    document.getElementById("div4").style.display="inline";
+    document.getElementById("div5").style.display="inline";
+    document.getElementById("div4").innerHTML="Addition of Texboxes is : "+add;
+}
+
+function reset(){
+    document.getElementById("div4").style.display="none";
+    document.getElementById("div1").style.display="inline";
+    document.getElementById("div5").style.display="none";
+    document.getElementById("text1").value="";
+}
+</script>
+<div id="div1">
+    Enter Number : <input type="text" id="text1"><br><br>
+    <button onclick="textboxDisplay()">Click</button>
+
+
+</div>
+<div id="div2" style="display: none;">
+
+</div>
+<div id="div3" style="display: none;">
+    <button onclick="add()">Add</button>
+</div>
+
+<div id="div4" style="display: none;">
+
+
+</div><br><br>
+<div id="div5" style="display: none;">
+    <button onclick="reset()">Reset</button>
+</div>

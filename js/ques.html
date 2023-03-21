@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form_wrapper {
+            width: 400px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 2rem;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .submit_btn {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_wrapper">
+
+        <form>
+            <div class="ques_wrapper">
+                <p>Q1. What is the sum of 4 plus 8 ?</p>
+                <div class="option"> <span>a.15</span> <span>b.12</span> <span>c.11</span> <span>d.18</span></div>
+                <input type="text" name="" id="text1">
+            </div>
+            <div class="ques_wrapper">
+                <p>Q2. What is the sum of 20 minus 10 ?</p>
+                <div class="option"> <span>a.10</span> <span>b.20</span> <span>c.30</span> <span>d.50</span></div>
+                <input type="text" name="" id="text2">
+            </div>
+            <div class="ques_wrapper">
+                <p>Q3. What is the sum of 50 plus 20 ?</p>
+                <div class="option"> <span>a.30</span> <span>b.40</span> <span>c.50</span> <span>d.70</span></div>
+                <input type="text" name="" id="text3">
+            </div>
+            <div class="ques_wrapper">
+                <p>Q4. What is the sum of 4 multiply 8 ?</p>
+                <div class="option"> <span>a.15</span> <span>b.12</span> <span>c.32</span> <span>d.18</span></div>
+                <input type="text" name="" id="text4">
+            </div>
+            <div class="ques_wrapper">
+                <p>Q5. What is the sum of 40 divid 20 ?</p>
+                <div class="option"> <span>a.60</span> <span>b.02</span> <span>c.10</span> <span>d.20</span></div>
+                <input type="text" name="" id="text5">
+            </div>
+            <div class="submit_btn">
+                <input type="submit" value="submit" onclick="ansfun();">
+
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+
+
+       
+        // var data = 0;
+        function ansfun() {
+            event.preventDefault();
+               
+        var q1 = document.getElementById("text1").value;
+        var q2 = document.getElementById("text2").value;
+        var q3 = document.getElementById("text3").value;
+        var q4 = document.getElementById("text4").value;
+        var q5 = document.getElementById("text5").value;
+            // var xc = this.parentNode.querySelectorAll("input[type='text']")[0].value;
+
+            // var x = {
+            //     q1: b,
+            //     q2: c
+            // }
+            // console.log(q1,q2,q3,q4,q5);
+
+
+            if (q1 == "b") {
+                console.log("your answer is right");
+                q1 = 1;
+
+            } else {
+                q1 = 0;
+            }
+            if (q2 == "a") {
+                q2 = 1;
+                console.log("your answer is right");
+            } else {
+                q2 = 0;
+            }
+            if (q3 == "d") {
+                q3 = 1;
+                console.log("your answer is right");
+            } else {
+                q3 = 0;
+            }
+            if (q4 == "c") {
+                q4 = 1;
+                console.log("your answer is right");
+            } else {
+                q4 = 0;
+            }
+            if (q5 == "b") {
+             q5 = 1;
+                console.log("your answer is right");
+            } else {
+                q5 = 0;
+                
+            }
+           
+
+            var total = q1 +q2;
+
+            console.log(total);
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

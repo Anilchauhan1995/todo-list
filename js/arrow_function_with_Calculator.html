@@ -28,7 +28,7 @@
         if(oper == '+'){
              let sum =  parseInt(num1.value) + parseInt(num2.value);
              console.log(sum);
-
+             nullValue(); 
             
         }
 
@@ -49,6 +49,9 @@
         }
         //  let sum =  parseInt(a.value) + parseInt(b.value);
         
+    }
+    function nullValue() {
+     num1.value = '';
     }
     // document.getElementById("sum").addEventListener("click", ()=> {calc(num1,num2)});
 </script>

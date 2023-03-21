@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and object</title>
+</head>
+<body>
+   <script> 
+// class a1 {
+//     constructor(a,b) {
+//         this.a = a;
+//         this.b = b;
+        
+//     }
+//     test(){
+//         console.log(this.a + this.b);
+//     }
+
+// }
+
+// var a11 = new a1(5,10);
+// a11.test();
+// var a12 = new a1(20,30);
+// a12.test();
+
+class test {
+    constructor(a,b){
+        this.a = parseInt(prompt("enter a value"));
+        this.b = parseInt(prompt("enter a value"));
+        this.c = prompt("enter any operator");
+        
+    }
+    sum(){
+        if (this.c == '+') {
+            
+            this.d = this.a + this.b;
+        }
+        if (this.c == '-') {
+            
+            this.d = this.a - this.b;
+        }
+        if (this.c == '*') {
+            
+            this.d = this.a * this.b;
+        }
+        if (this.c == '/') {
+            
+            this.d = this.a / this.b;
+        }
+    }
+   
+    result(){
+        console.log(this.d);
+    }
+
+}
+   
+
+var add = new test();
+
+add.sum();
+add.result();
+
+
+</script>
+
+</body>
+</html>

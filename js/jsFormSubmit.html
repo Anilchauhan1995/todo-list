@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+.buttons{
+    display: flex;
+    column-gap: 5rem;
+}
+.form_step_two {
+    display: none;
+}
+</style>
+<body>
+
+    <form action="">
+        <div class="form_step_one" id="first_form">
+            <label>Name</label> 
+            <br>
+            <input type="text" name="" id="name" placeholder="Name">
+            <br>
+            <label for=""> Number</label>
+            <br>
+            <input type="number" name="" id="number" placeholder="Number">
+            <br>
+            <label for="">Email</label>
+            <br>
+            <input type="email" name="" id="email" placeholder="Email">
+            <br>
+            <label for="">Address</label><br>
+            <textarea name="" id="address" cols="20" rows="3"></textarea>
+            <br>
+            <div class="buttons">
+            <button type="button" id="next" onclick="Gonext();">Next</button>
+            </div>
+        </div>
+        <div class="form_step_two" id="second_form">
+            <label>English</label> 
+            <br>
+            <input  type="number" name="" id="eng" placeholder="ObtainMarks">
+            <input type="number" name="" class="total_marks" placeholder="Total Marks" value="100">
+            <br>
+            <label>Hindi</label> 
+            <br>
+            <input type="number" name="" id="hin" placeholder="ObtainMarks">
+            <input type="number" name="" class="total_marks" placeholder="Total Marks" value="100">
+            <br>
+            <label>Math</label> 
+            <br>
+            <input type="number" name="" id="math" placeholder="ObtainMarks">
+            <input type="number" name="" class="total_marks" placeholder="Total Marks" value="100">
+            <br>
+            <label>Science</label> 
+            <br>
+            <input type="number" name="" id="sci" placeholder="ObtainMarks">
+            <input type="number" name="" class="total_marks" placeholder="Total Marks" value="100">
+            <br>
+            <label>Social Science</label> 
+            <br>
+            <input type="number" name="" id="sos" placeholder="ObtainMarks">
+            <input type="number" name="" class="total_marks" placeholder="Total Marks" value="100">
+            <br>
+            <label>Physical</label> 
+            <br>
+            <input type="number" name="" id="phy" placeholder="ObtainMarks">
+            <input type="number" name="" class="total_marks" placeholder="Total Marks" value="100">
+            <br>
+            <div class="buttons">
+         <button type="button" id="prev" onclick="back();">Prev</button>
+            </div>
+            <div class="submit_btn">
+                <input type="submit" value="Result" onclick="result();">
+            </div>
+        </div>
+    </form>
+
+    <div id="result_show">
+
+        
+    </div>
+
+    <script>
+
+        // function myfun(next , prev){
+        //     // document.getElementById("second_form").style.display="block";
+        //     // document.getElementById("first_form").style.display="none"; 
+            
+        //     if (next==='next') {
+                
+        //         document.getElementById("second_form").style.display="block";
+        //         event.preventDefault();
+        //         document.getElementById("first_form").style.display="none"; 
+                
+        //         console.log(next);
+        //     }
+        //     event.preventDefault();
+        //     if(prev==='prev'){
+        //         console.log(prev);
+        //         document.getElementById("first_form").style.display="block"; 
+        //         document.getElementById("second_form").style.display="none";
+        //     }
+
+                  
+        // }
+
+
+        function Gonext(){
+            console.log("true");
+            document.getElementById("second_form").style.display="block";
+            document.getElementById("first_form").style.display="none";
+            event.preventDefault();
+
+        }
+        function back(){
+            console.log("false");
+            document.getElementById("first_form").style.display="block";
+            document.getElementById("second_form").style.display="none";
+            event.preventDefault();
+            
+        }
+        function result(){
+            event.preventDefault();
+            document.getElementById("second_form").style.display="none";
+        var name = document.getElementById("name").value; 
+        var number = document.getElementById("number").value; 
+        var email = document.getElementById("email").value; 
+        var address = document.getElementById("address").value;     
+        var english = document.getElementById("eng").value; 
+        var hindi = document.getElementById("hin").value; 
+        var math = document.getElementById("math").value; 
+        var science = document.getElementById("sci").value; 
+        var sos = document.getElementById("sos").value; 
+        var phy = document.getElementById("phy").value; 
+        var tom = document.getElementsByClassName("total_marks").value;
+        var  total_Marks = Number(english) + Number(hindi) + Number(math) + Number(science) + Number(sos)  + Number(phy);
+        // var total_number = 0;
+        //   total_number += tom;
+
+        var input_sum = document.getElementsByClassName("total_marks");
+          var sum = 0;
+        for (let i = 0; i < input_sum.length; i++) {
+           
+            sum =+ i;
+            
+            console.log(sum);
+            
+        }
+           
+          var percentage = total_Marks / 600 * 100;
+        // document.getElementById("result_show").innerHTML += "Name :" + name + "<br>" + "Number : " + number +"<br>" + "Email : " + email + "<br>" + "Address : " + address +"<br>" +   "total Marks :" + " = " + total_Marks + "/" + 600 + "<br>" + "Percentage : " + " = " + percentage.toFixed(2) + "%";
+        document.getElementById("result_show").innerHTML += `Name : ${name} <br> Number : ${number} <br> Email :  ${email} <br> Address: ${address}  <br> Total Markes = ${total_Marks} / 600 <br> Percentage : ${percentage.toFixed(2)}% `;
+        // console.log(total_Marks);
+        // console.log(percentage);
+        
+        if ((percentage<= 100) && (percentage>= 80) )  {
+
+            document.getElementById("result_show").innerHTML += Grade +" = " + "A"; 
+            
+        }
+
+    }
+
+    </script>
+</body>
+</html
+

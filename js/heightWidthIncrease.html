@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heightWidthIncrease</title>
+</head>
+<style>
+
+    #div{
+        width: 200px;
+        height: 200px;
+        background-color: red
+    }
+</style>
+<body>
+
+<div id="div">
+
+</div>
+    
+
+<button onclick="plus();">+</button>
+<button onclick="minu();">-</button>
+
+    <script>
+
+var a = 210;
+
+
+function plus(){
+    var add = document.getElementById("div");
+    a = a + 10;
+    add.style.height = a + "px";
+    add.style.width = a + "px";
+
+}
+var b = 200;
+function minu(){
+    var add = document.getElementById("div");
+    b = b - 10;
+    add.style.height = b + "px";
+    add.style.width = b + "px";
+
+    // console.log(b);
+
+
+}
+
+
+    </script>
+</body>
+</html>

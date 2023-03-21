@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+ class abc {
+    abc1(){
+        console.log("abc1");
+    }
+    abc2(){
+        console.log("abc2");
+    }
+
+  
+ }
+
+ class def extends abc {
+
+    def11(){
+        console.log("abcd1");
+    }
+    def22(){
+        console.log("abcde2");
+    }
+ }
+ class efg  extends def {
+
+efg11(){
+    console.log("abcd1");
+}
+efg22(){
+    console.log("efgh2");
+}
+}
+
+
+
+ var o1 = new abc();
+
+ var o2 = new def();
+
+ var o3 = new efg();
+
+
+ o2.def11();
+ o2.def22();
+ o3.efg22();
+
+
+
+    </script>
+    
+</body>
+</html>

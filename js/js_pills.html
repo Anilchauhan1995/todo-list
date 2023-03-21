@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div{
+        width: 50px;
+        height: 50px;
+        background-color: #000;
+    }
+</style>
+<body>
+    <!-- <div id="text">
+
+    </div>
+    <input type="text" id="input">
+
+    <button onclick="abc();">click</button>
+
+    <script>
+        
+        function abc(){
+            var a = document.getElementById("input");
+            // console.log(a);
+
+            document.getElementById("text").innerHTML += a.value;
+            
+            a.value = "";
+
+        }
+    </script> -->
+
+
+
+
+    <!-- second task -->
+
+
+    <div id="div">
+
+    </div>
+
+    <button onclick="plus();">+</button>
+    <button onclick="minus();">-</button>
+    <br>
+    <br>
+    <button onclick="red();">red</button>
+    <button onclick="blue();">blue</button>
+    <button onclick="yellow();">yellow</button>
+    <button onclick="orange();">orange</button>
+
+
+    <script>
+
+        function plus(){
+            let x = document.getElementById("div").offsetWidth;
+            let y = document.getElementById("div").offsetHeight;
+           document.getElementById("div").style.width=x + 10 + 'px';
+           document.getElementById("div").style.height=y + 10 + 'px';
+        }
+        function minus(){
+            let minx = document.getElementById("div").offsetWidth;
+            let miny = document.getElementById("div").offsetHeight;
+           document.getElementById("div").style.width=minx + -10 + 'px';
+           document.getElementById("div").style.height=minx + -10 + 'px';
+        }
+
+
+        function red(){
+            document.getElementById("div").style.backgroundColor="red";
+        }
+        function blue(){
+            document.getElementById("div").style.backgroundColor="blue";
+        }
+        function yellow(){
+            document.getElementById("div").style.backgroundColor="yellow";
+        }
+        function orange(){
+            document.getElementById("div").style.backgroundColor="orange";
+        }
+    </script>
+
+</body>
+</html>

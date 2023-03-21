@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COnstructor</title>
+</head>
+<body>
+    
+    <script>
+    // class user{
+    //     constructor(){
+    //         console.log("This is Constructor");
+    //     }
+
+    //     // user1(){
+    //     //     console.log("user1");
+    //     // }
+    //     // user2(){
+    //     //     console.log("user2");
+    //     // }
+
+    // }
+    
+    // let all_user = new user();
+    // all_user.user1();
+    // all_user.user2();
+
+
+
+// class calc{
+// constructor(a,b){
+//     this.a = a;
+//     this.b = b;
+   
+// }
+
+// add(){
+//     console.log(this.a+this.b);
+// }
+
+// minus(){
+//     console.log(this.a-this.b);
+// }
+// multiply(){
+//     console.log(this.a*this.b);
+// }
+// divid(){
+//     console.log(this.a/this.b);
+// }
+
+// }
+
+
+// let calc_val= new calc(5,10);
+
+// calc_val.add();
+// calc_val.minus();
+// calc_val.multiply();
+// calc_val.divid();
+
+
+function Calculator() {
+
+this.read = function() {
+  this.a = +prompt('a?', 0);
+  this.b = +prompt('b?', 0);
+  this.c = +prompt("enter a operator");
+};
+
+this.sum = function() {
+  return this.a + this.b;
+};
+this.minus = function() {
+  return this.a - this.b;
+};
+
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Minus=" + calculator.minus() );
+
+
+
+
+    </script>
+
+</body>
+</html>

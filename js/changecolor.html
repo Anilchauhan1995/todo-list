@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    }
+    #div{
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+    }
+</style>
+<body>
+    
+    <div id="div">
+
+    </div>
+
+<br>
+    <button id="red" onclick="clr('red');">red</button>
+    <button id="yellow"  onclick="clr('green');">yellow</button>
+    <button id="green" onclick="clr('yellow');">green</button>
+    <button id="black" onclick="clr('black');">black</button>
+
+
+
+    <script>
+        
+        function clr(color) {
+        document.getElementById("div").style.background = color;
+        }
+    </script>
+</body>
+</html>

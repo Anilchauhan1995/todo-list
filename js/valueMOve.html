@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" name="" id="text">
+
+
+<button onclick="abc();" id="button1">button1</button>
+<button onclick="bca();" id="button2">button2</button>
+
+
+<script>
+// var c = document.getElementById("text");
+var c1 = document.getElementById("button1");
+var c2 = document.getElementById("button2");
+
+
+function abc(){
+
+document.getElementById("text").value = c1.innerHTML;
+// document.getElementById("text").value = c2.innerHTML;
+console.log(c1.value);
+
+
+}
+
+function bca(){
+
+document.getElementById("text").value = c2.innerHTML;
+console.log(c1.value);
+
+
+}
+
+
+</script>
+</body>
+</html>
