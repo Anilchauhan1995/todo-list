@@ -1,6 +1,3 @@
-<script>
-
 let color = ['red','green','blue'];
 document.write("Color" + " " + "=" +" " + color);
-
-</script>
+console.log(color);
